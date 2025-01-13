@@ -1,0 +1,26 @@
+---
+import Base from "@/layouts/Base.astro";
+import CallToAction2 from "@/partials/CallToAction2.astro";
+import IntegrationCardLayout from "@/partials/IntegrationCardLayout.astro";
+import IntegrationSection from "@/partials/IntegrationSection.astro";
+import { getEntry } from "astro:content";
+
+const feature = await getEntry("integration", "-index");
+const { title, description, meta_title, image } = feature.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <IntegrationSection
+    largeHeading={true}
+    hideBackground={true}
+    fluidContainer={true}
+    hideCTAButton={true}
+    hideHeadingOverlay={true}
+  />
+  <IntegrationCardLayout />
+  <CallToAction2 />
+</Base>

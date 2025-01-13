@@ -1,0 +1,31 @@
+---
+import Base from "@/layouts/Base.astro";
+import IntegrationSingle from "@/layouts/IntegrationSingle.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction2 from "@/partials/CallToAction2.astro";
+
+export async function getStaticPaths() {
+  const collection = "integration";
+  const integrations = await getSinglePage(collection);
+
+  const paths = integrations.map((integration) => ({
+    params: {
+      single: integration.slug,
+    },
+    props: { integration },
+  }));
+  return paths;
+}
+
+const { integration } = Astro.props;
+const { title, meta_title, description, image } = integration.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <IntegrationSingle {...integration} />
+  <CallToAction2 />
+</Base>

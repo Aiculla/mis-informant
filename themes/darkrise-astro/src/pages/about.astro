@@ -1,0 +1,24 @@
+---
+import Base from "@/layouts/Base.astro";
+import OurTeam from "@/partials/OurTeam.astro";
+import AboutBanner from "@/partials/AboutBanner.astro";
+import CallToAction from "@/partials/CallToAction1.astro";
+import { getEntry } from "astro:content";
+import Values from "@/partials/Values.astro";
+import CareerCTA from "@/partials/CareerCta.astro";
+
+const about = await getEntry("about", "-index");
+const { title, description, meta_title, image } = about.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <AboutBanner />
+  <Values />
+  <OurTeam />
+  <CareerCTA />
+  <CallToAction />
+</Base>

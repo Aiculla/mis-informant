@@ -1,0 +1,31 @@
+---
+import FeaturedTestimonial from "@/components/FeaturedTestimonial.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction2 from "@/partials/CallToAction2.astro";
+import FeaturesGrid from "@/partials/FeaturesGrid.astro";
+import FeaturesStickyLayout from "@/partials/FeaturesStickyLayout.astro";
+import { getEntry } from "astro:content";
+
+const feature = await getEntry("feature", "-index");
+const { title, description, meta_title, image } = feature.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <FeaturesGrid largeHeading={true} />
+  <FeaturesStickyLayout sticky={false} />
+
+  <section class="section pt-0">
+    <div class="container">
+      <FeaturedTestimonial
+        alternateLayout={true}
+        featuredCustomer={"David Miller"}
+      />
+    </div>
+  </section>
+
+  <CallToAction2 />
+</Base>

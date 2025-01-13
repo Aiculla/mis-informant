@@ -1,0 +1,256 @@
+---
+import AnimatedAnchor from "@/components/AnimatedAnchor.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { Button } from "@/types";
+import { getEntry } from "astro:content";
+
+interface CallToAction {
+  enable: boolean;
+  title: string;
+  bg_image: string;
+  description: string;
+  button: Button;
+  image: string;
+  list: {
+    icon?: string;
+    image?: string;
+  }[];
+}
+
+const { enable, title, bg_image, description, button, list }: CallToAction = (
+  await getEntry("sections", "call-to-action-2")
+).data;
+---
+
+{
+  enable && (
+    <section class="section">
+      <div class="container">
+        <div class="relative overflow-hidden rounded-2xl border border-white/5 bg-theme-dark/60 py-40">
+          <div aria-hidden="true">
+            <ImageMod
+              class="absolute bottom-0 z-0 h-full w-full"
+              src={bg_image}
+              alt="background pattern image"
+            />
+          </div>
+          <div
+            aria-hidden="true"
+            class="pointer-events-none absolute inset-0 z-0 h-full w-full">
+            {/* User Image 01 */}
+            <div class="absolute left-[9%] top-[12%] w-fit">
+              {list && list[0] && list[0].image ? (
+                <div class="ml-1 h-12 w-12 overflow-hidden md:h-20 md:w-20">
+                  <ImageMod
+                    src={list[0].image}
+                    class="h-full w-full object-cover"
+                    alt="user image"
+                  />
+                </div>
+              ) : (
+                list &&
+                list[0].icon && (
+                  <div class="relative z-10 -mt-4 ml-0 h-12 w-12 overflow-hidden rounded-full via-inherit p-px after:absolute after:inset-0 after:-z-10 after:from-white/10 after:to-white/40 after:content-[''] after:bg-gradient-[145deg] md:h-20 md:w-20">
+                    <div class="flex h-full w-full items-center justify-center rounded-full bg-theme-dark object-cover">
+                      <ImageMod
+                        src={list[0].icon}
+                        class="h-1/2 w-1/2"
+                        alt="user image"
+                      />
+                    </div>
+                  </div>
+                )
+              )}
+
+              <ImageMod
+                src="/images/call-to-action/pattern-1.png"
+                class="max-md:w-40"
+                alt="icon"
+              />
+            </div>
+            {/* User Image 02 */}
+            <div class="absolute -top-2 left-[38%] w-fit pl-2">
+              {list && list[1] && list[1].image ? (
+                <div class="h-12 w-12 overflow-hidden md:h-16 md:w-16">
+                  <ImageMod
+                    src={list[1].image}
+                    class="h-full w-full object-cover"
+                    alt="user image"
+                  />
+                </div>
+              ) : (
+                list &&
+                list[1].icon && (
+                  <div class="relative z-10 -mt-4 ml-0 h-12 w-12 overflow-hidden rounded-full via-inherit p-px after:absolute after:inset-0 after:-z-10 after:from-white/10 after:to-white/40 after:content-[''] after:bg-gradient-[145deg] md:h-20 md:w-20">
+                    <div class="flex h-full w-full items-center justify-center rounded-full bg-theme-dark object-cover">
+                      <ImageMod
+                        src={list[1].icon}
+                        class="h-1/2 w-1/2"
+                        alt="user image"
+                      />
+                    </div>
+                  </div>
+                )
+              )}
+              <ImageMod
+                src="/images/call-to-action/pattern-2.png"
+                class="max-md:w-24"
+                alt="icon"
+              />
+            </div>
+            {/* Icon 03 */}
+            <div class="absolute right-[12%] top-[10%] flex w-fit items-center">
+              <ImageMod
+                src="/images/call-to-action/pattern-3.png"
+                class="max-md:w-40"
+                alt="icon"
+              />
+              {list && list[2] && list[2].image ? (
+                <div class="h-12 w-12 overflow-hidden md:h-20 md:w-20">
+                  <ImageMod
+                    src={list[2].image}
+                    class="h-full w-full object-cover"
+                    alt="user image"
+                  />
+                </div>
+              ) : (
+                list &&
+                list[2].icon && (
+                  <div class="relative z-10 -mt-4 ml-0 h-12 w-12 overflow-hidden rounded-full via-inherit p-px after:absolute after:inset-0 after:-z-10 after:from-white/10 after:to-white/40 after:content-[''] after:bg-gradient-[145deg] md:h-20 md:w-20">
+                    <div class="flex h-full w-full items-center justify-center rounded-full bg-theme-dark object-cover">
+                      <ImageMod
+                        src={list[2].icon}
+                        class="h-1/2 w-1/2"
+                        alt="user image"
+                      />
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+            {/* User Image 04 */}
+            <div class="absolute right-[9%] top-[70%] w-fit md:top-[48%]">
+              <ImageMod
+                src="/images/call-to-action/pattern-4.png"
+                class="max-md:w-40"
+                alt="icon"
+              />
+              {list && list[3] && list[3].image ? (
+                <div class="ml-auto h-12 w-12 overflow-hidden md:h-16 md:w-16">
+                  <ImageMod
+                    src={list[3].image}
+                    class="h-full w-full object-cover"
+                    alt="user image"
+                  />
+                </div>
+              ) : (
+                list &&
+                list[3].icon && (
+                  <div class="relative z-10 -mt-4 ml-auto h-12 w-12 overflow-hidden rounded-full via-inherit p-px after:absolute after:inset-0 after:-z-10 after:from-white/10 after:to-white/40 after:content-[''] after:bg-gradient-[145deg] md:h-16 md:w-16">
+                    <div class="flex h-full w-full items-center justify-center rounded-full bg-theme-dark object-cover">
+                      <ImageMod
+                        src={list[3].icon}
+                        class="h-1/2 w-1/2"
+                        alt="user image"
+                      />
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+            {/* Icon 05 */}
+            <div class="absolute bottom-[-3%] right-[28%]">
+              <ImageMod
+                src="/images/call-to-action/pattern-5.png"
+                class="max-md:w-40"
+                alt="icon"
+              />
+              {list && list[4] && list[4].image ? (
+                <div class="ml-auto h-12 w-12 overflow-hidden md:h-16 md:w-16">
+                  <ImageMod
+                    src={list[4].image}
+                    class="h-full w-full object-cover"
+                    alt="user image"
+                  />
+                </div>
+              ) : (
+                list &&
+                list[4].icon && (
+                  <div class="relative z-10 -mt-4 ml-auto h-12 w-12 overflow-hidden rounded-full via-inherit p-px after:absolute after:inset-0 after:-z-10 after:from-white/10 after:to-white/40 after:content-[''] after:bg-gradient-[145deg] md:h-16 md:w-16">
+                    <div class="flex h-full w-full items-center justify-center rounded-full bg-theme-dark object-cover">
+                      <ImageMod
+                        src={list[4].icon}
+                        class="h-1/2 w-1/2"
+                        alt="user image"
+                      />
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+            {/* Icon 06 */}
+            <div class="absolute bottom-[2%] left-[14%] flex items-center">
+              {list && list[5] && list[5].image ? (
+                <div class="ml-auto h-12 w-12 overflow-hidden md:h-20 md:w-20">
+                  <ImageMod
+                    src={list[5].image}
+                    class="h-full w-full object-cover"
+                    alt="user image"
+                  />
+                </div>
+              ) : (
+                list &&
+                list[5].icon && (
+                  <div class="relative z-10 -mt-4 ml-auto h-12 w-12 overflow-hidden rounded-full via-inherit p-px after:absolute after:inset-0 after:-z-10 after:from-white/10 after:to-white/40 after:content-[''] after:bg-gradient-[145deg] md:h-20 md:w-20">
+                    <div class="flex h-full w-full items-center justify-center rounded-full bg-theme-dark object-cover">
+                      <ImageMod
+                        src={list[5].icon}
+                        class="h-1/2 w-1/2"
+                        alt="user image"
+                      />
+                    </div>
+                  </div>
+                )
+              )}
+              <ImageMod
+                src="/images/call-to-action/pattern-6.png"
+                class="mb-10 max-md:w-40"
+                alt="icon"
+              />
+            </div>
+          </div>
+          <div class="row relative z-10 px-5 lg:gy-0 md:px-10">
+            <div class="mx-auto text-center lg:col-6">
+              <h2
+                set:html={markdownify(title)}
+                class="has-gradient mb-4"
+                data-aos="fade-up-sm"
+              />
+              <div data-aos="fade-up-sm" data-aos-delay="50">
+                <p
+                  set:html={markdownify(description)}
+                  class="text-lg/[inherit] opacity-50"
+                />
+              </div>
+              {button && button.enable && (
+                <AnimatedAnchor
+                  className="btn-primary mt-10"
+                  link={button.link}
+                  label={button.label}
+                  data-aos="fade-up-sm"
+                  data-aos-delay="150"
+                />
+              )}
+            </div>
+          </div>
+          {/* Overlay */}
+          <div
+            aria-hidden="true"
+            class="pointer-events-none absolute -left-20 top-0 z-10 h-[358px] w-[516px] rotate-[-19deg] rounded-full from-secondary/40 from-40% via-secondary via-60% to-primary opacity-30 blur-[100px] bg-gradient-[60deg]"
+          />
+        </div>
+      </div>
+    </section>
+  )
+}

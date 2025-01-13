@@ -1,0 +1,24 @@
+---
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction1.astro";
+import FeaturesCardLayout from "@/partials/FeaturesCardLayout.astro";
+import PricingCompare from "@/partials/PricingCompare.astro";
+import PricingSection from "@/partials/PricingSection.astro";
+import Testimonial from "@/partials/Testimonial.astro";
+import { getEntry } from "astro:content";
+
+const pricing = await getEntry("pricing", "-index");
+const { title, description, meta_title, image, features } = pricing.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}>
+  <PricingSection largeHeading={true} />
+  <FeaturesCardLayout content={features} />
+  <PricingCompare />
+  <Testimonial featuredCustomer="David Miller" hideCTAButton={true} />
+  <CallToAction />
+</Base>

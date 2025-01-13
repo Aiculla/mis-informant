@@ -1,0 +1,51 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+
+interface About {
+  title: string;
+  image: string;
+  description: string;
+}
+
+const { title, description, image }: About = (
+  await getEntry("sections", "about-banner")
+).data;
+---
+
+{
+  (
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="lg:col-6" data-aos="fade-up-sm">
+            {title && (
+              <h1 class="has-gradient mb-6" set:html={markdownify(title)} />
+            )}
+          </div>
+          <div
+            class="lg:col-6 lg:pl-20"
+            data-aos="fade-up-sm"
+            data-aos-delay="100">
+            {description && (
+              <div
+                class="content [&>p:last-child]:text-base [&>p:last-child]:opacity-80"
+                set:html={markdownify(description, true)}
+              />
+            )}
+          </div>
+          <div class="col-12 pt-20" data-aos="fade-up-sm" data-aos-delay="200">
+            {image && (
+              <ImageMod
+                class="h-[300px] min-h-full w-full rounded-lg object-cover md:h-[700px] md:rounded-3xl"
+                src={image}
+                alt={`image related to ${title || ""}`}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

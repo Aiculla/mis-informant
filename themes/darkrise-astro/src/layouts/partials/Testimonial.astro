@@ -1,0 +1,106 @@
+---
+import AnimatedAnchor from "@/components/AnimatedAnchor.astro";
+import AnimatedTestimonialList from "@/components/AnimatedTestimonialList.astro";
+import FeaturedTestimonial from "@/components/FeaturedTestimonial.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { Button } from "@/types";
+import { getEntry } from "astro:content";
+
+interface TestimonialListItem {
+  title: string;
+  featured: boolean;
+  content: string;
+  customer: {
+    avatar: string;
+    name: string;
+    designation: string;
+  };
+  list: {
+    title: string;
+    description: string;
+  }[];
+}
+
+interface Testimonial {
+  title: string;
+  subtitle: string;
+  button: Button;
+  description: string;
+  list: TestimonialListItem[];
+}
+
+interface Props {
+  featuredCustomer?: string;
+  hideCTAButton?: boolean;
+}
+
+const { featuredCustomer, hideCTAButton }: Props = Astro.props;
+
+let { title, button, subtitle, list } = (
+  await getEntry("sections", "testimonial")
+).data as Testimonial;
+
+// Exclude featured item from list
+list = list.filter((item) => !item.featured);
+
+let firstList = list.slice(0, Math.floor(list.length / 2));
+firstList = [...firstList, ...firstList];
+let secondList = list.slice(Math.floor(list.length / 2), list.length);
+secondList = [...secondList, ...secondList].reverse();
+let thirdList = list.slice(Math.floor(list.length / 2), list.length);
+thirdList = [...thirdList, ...thirdList];
+---
+
+{
+  (
+    <section class="section overflow-hidden">
+      <div class="container">
+        <div class="row">
+          {/* Heading */}
+          <div
+            class="mx-auto text-center lg:col-8 xl:col-9"
+            data-aos="fade-up-sm">
+            {subtitle && (
+              <p
+                class="mb-4 text-xl/[inherit] font-medium text-blue-400"
+                set:html={markdownify(subtitle)}
+              />
+            )}
+
+            {title && <h2 class="has-gradient" set:html={markdownify(title)} />}
+          </div>
+
+          {/* Featured Testimonial */}
+          <FeaturedTestimonial featuredCustomer={featuredCustomer} />
+
+          {/* Regular Testimonial */}
+          <div class="col-12 text-center">
+            <div class="row gy-4 relative mt-14 flex overflow-hidden lg:gx-4 before:pointer-events-none before:absolute before:top-0 before:z-10 before:h-full before:w-10 before:bg-gradient-to-r before:from-body before:to-transparent before:content-[''] after:pointer-events-none after:absolute after:bottom-0 after:right-0 after:h-full after:w-10 after:bg-gradient-to-r after:from-transparent after:to-body after:content-[''] before:md:w-40 after:md:w-40 lg:h-[800px] before:lg:h-40 before:lg:w-full before:lg:bg-gradient-to-b after:lg:h-40 after:lg:w-full after:lg:bg-gradient-to-b">
+              <div class="lg:col-4">
+                <AnimatedTestimonialList list={firstList} />
+              </div>
+              <div class="lg:col-4">
+                <AnimatedTestimonialList
+                  direction="reverse"
+                  list={secondList}
+                />
+              </div>
+              <div class="lg:col-4">
+                <AnimatedTestimonialList list={thirdList} />
+              </div>
+            </div>
+            {!hideCTAButton && button && button.enable && (
+              <AnimatedAnchor
+                label={button.label}
+                link={button.link}
+                className="btn-primary mt-10"
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<script></script>
