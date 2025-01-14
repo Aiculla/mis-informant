@@ -1,37 +1,35 @@
 ---
-- title: Get proper data & sales statistics.
+- title: The Fight Against Misinformation
   images:
     - "/images/features/sales-overview.png"
-    - "/images/features/monthly-sale.png"
-  description: Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions and close deals more effectively looking.
+
+  description: In today's information-saturated world, misinformation threatens trust, safety, and societal progress.
   list:
-    - Event marketing
-    - Content creation
-    - Brand strategy
-    - Data analyzing
+    - Crisis Communication
+    - Fact-Checking Campaigns
+    - Digital Trust Building
+    - Data-Driven Storytelling
   button:
     enable: true
     label: "Get Started Now"
     link: "/"
-- title: Bring visitors from different sources.
+- title: The Digital Trust Revolution
   images:
     - "/images/features/audience-activity.png"
-    - "/images/features/summery.png"
-  description: Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions and close deals more effectively looking.
+  description: Our cutting-edge solutions empower businesses to build credibility, safeguard their online presence, and inspire confidence in their audiences.
   list:
-    - Event marketing
-    - Content creation
-    - Brand strategy
-    - Data analyzing
+    - Cybersecurity enhancement
+    - Online reputation management
+    - Ethical AI implementation
+    - Transparent communication strategies
   button:
     enable: true
     label: "Get Started Now"
     link: "/"
-- title: Acquire and retrain more customer.
+- title: Our Promise
   images:
-    - "/images/features/customer.png"
-    - "/images/features/customer-sales.png"
-  description: Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions and close deals more effectively looking.
+    - "/images/features/sales-overview.png"
+  description: Our platform combats misinformation to safeguard public health, enhance political integrity, protect public safety, and ensure accurate global and domestic news. By verifying claims and exposing falsehoods, we empower informed decisions and promote trust in critical information sources.
   list:
     - Event marketing
     - Content creation

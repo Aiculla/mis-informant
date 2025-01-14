@@ -1,22 +1,11 @@
 ---
 # Banner
-note: Awarded as the best startup in 2023
-title: "Earn revenue by selling anything from the internet on your app."
-description: Gain invaluable predictive analytics and actionable insights empowering.
-
-image:
-  src: "/images/banner.jpg" # Main Image
-  alt: "image alt"
+note: Revealing the Truth Since 2024
+title: "Uncover the truth in a world of noise."
+description: Leverage cutting-edge technology to detect and combat misinformation, delivering actionable insights to empower your decisions.
 
 buttons:
   - enable: true
-    label: "Start 14 Days Free Trial"
+    label: "Uncover the truth in a world of noise."
     link: "/contact/"
-  - enable: true
-    label: "Request Free Demo"
-    link: "/contact/"
-
-list:
-  - No Credit Card Required
-  - Cancel Anytime
 ---
