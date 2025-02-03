@@ -28,7 +28,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .navbar {
-  @apply relative flex max-w-[960px] flex-wrap items-center justify-start rounded-full border border-border/50 bg-primary/50 px-6 py-2 backdrop-blur-md max-lg:py-4 sm:justify-end lg:justify-between lg:pl-4 lg:pr-3;
+  @apply relative flex max-w-[960px] flex-wrap items-center justify-between rounded-full border border-border/50 bg-primary/50 px-6 py-2 backdrop-blur-md max-lg:py-4 sm:justify-end lg:pl-6 lg:pr-6 mt-0;
 }
 .navbar-nav {
   @apply max-h-[calc(100vh_-_100px)] max-lg:absolute max-lg:top-full max-lg:z-10 max-lg:overflow-auto max-lg:rounded-2xl max-lg:border max-lg:border-border max-lg:bg-primary max-lg:px-4 max-lg:py-6 max-lg:shadow max-sm:left-0 max-sm:w-full sm:w-[calc(100%_-_48px)] md:mt-2 lg:mt-0;

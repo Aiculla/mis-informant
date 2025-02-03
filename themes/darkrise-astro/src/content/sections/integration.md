@@ -1,9 +1,4 @@
 ---
-title: Connect with 100+ tools
-description: Gain invaluable predictive analytics and actionable insights <br/> empowering your to make data-driven decisions.
-
-button:
-  enable: true
-  label: Explore All Tools
-  link: "/integration/"
+title: Compatible with 100+ tools
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---

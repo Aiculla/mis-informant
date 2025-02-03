@@ -1,44 +1,33 @@
 ---
-- title: Get proper data & sales statistics.
+- title: The Fight Against Misinformation
   images:
     - "/images/features/sales-overview.png"
-    - "/images/features/monthly-sale.png"
-  description: Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions and close deals more effectively looking.
+
+  description: Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.
   list:
-    - Event marketing
-    - Content creation
-    - Brand strategy
-    - Data analyzing
-  button:
-    enable: true
-    label: "Get Started Now"
-    link: "/"
-- title: Bring visitors from different sources.
+    - Vestibulum auctor dapibus neque.
+    - Aliquam tincidunt mauris eu risus.
+    - Vestibulum auctor dapibus neque.
+    - Nunc dignissim risus id metus.
+    - Cras ornare tristique elit.
+- title: The Digital Trust Revolution
   images:
     - "/images/features/audience-activity.png"
-    - "/images/features/summery.png"
-  description: Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions and close deals more effectively looking.
+  description: Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.
   list:
-    - Event marketing
-    - Content creation
-    - Brand strategy
-    - Data analyzing
-  button:
-    enable: true
-    label: "Get Started Now"
-    link: "/"
-- title: Acquire and retrain more customer.
+    - Vestibulum auctor dapibus neque.
+    - Aliquam tincidunt mauris eu risus.
+    - Vestibulum auctor dapibus neque.
+    - Nunc dignissim risus id metus.
+    - Cras ornare tristique elit.
+- title: Our Promise
   images:
-    - "/images/features/customer.png"
-    - "/images/features/customer-sales.png"
-  description: Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions and close deals more effectively looking.
+    - "/images/features/sales-overview.png"
+  description: Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.
   list:
-    - Event marketing
-    - Content creation
-    - Brand strategy
-    - Data analyzing
-  button:
-    enable: true
-    label: "Get Started Now"
-    link: "/"
+    - Vestibulum auctor dapibus neque.
+    - Aliquam tincidunt mauris eu risus.
+    - Vestibulum auctor dapibus neque.
+    - Nunc dignissim risus id metus.
+    - Cras ornare tristique elit.
 ---
