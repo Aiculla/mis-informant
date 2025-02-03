@@ -22,7 +22,6 @@ export interface NavigationLink {
 }
 
 const { main }: { [key: string]: NavigationLink[] } = menu;
-const { navigation_button } = config;
 const { pathname } = Astro.url;
 ---
 
@@ -168,27 +167,8 @@ const { pathname } = Astro.url;
           </>
         ))
       }
-      {
-        navigation_button.enable && (
-          <AnimatedAnchor
-            link={navigation_button.link}
-            label={navigation_button.label}
-            className="btn-primary bg-transparent mt-2 lg:hidden bg-none"
-          />
-        )
-      }
+
     </ul>
-    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-      {
-        navigation_button.enable && (
-          <AnimatedAnchor
-            link={navigation_button.link}
-            label={navigation_button.label}
-            className="btn-primary bg-transparent hidden lg:flex bg-none"
-          />
-        )
-      }
-    </div>
   </nav>
 </header>
 

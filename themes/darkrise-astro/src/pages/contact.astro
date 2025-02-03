@@ -1,5 +1,4 @@
 ---
-import Base from "@/layouts/Base.astro";
 import ContactHero from "@/partials/ContactHero.astro";
 import ContactFormSection from "@/partials/ContactFormSection.astro";
 import CallToAction1 from "@/partials/CallToAction1.astro";
@@ -9,12 +8,18 @@ const contact = await getEntry("contact", "-index");
 const { title, description, meta_title, image } = contact.data;
 ---
 
-<Base
-  title={title}
-  meta_title={meta_title}
-  description={description}
-  image={image}>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{meta_title || title}</title>
+  <meta name="description" content={description} />
+  {image && <meta property="og:image" content={image} />}
+</head>
+<body>
   <ContactHero />
   <ContactFormSection />
   <CallToAction1 />
-</Base>
+</body>
+</html>
