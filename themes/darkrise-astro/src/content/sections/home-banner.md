@@ -7,5 +7,5 @@ description: Leverage cutting-edge technology to detect and combat misinformatio
 buttons:
   - enable: true
     label: "Learn More"
-    link: "/contact/"
+    link: "#features"
 ---

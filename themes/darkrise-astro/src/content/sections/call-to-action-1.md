@@ -1,9 +1,9 @@
 ---
 enable: true
-title: Grow your sales now
+title: Combat Misinformation,
 image: "/images/call-to-action.png"
 bg_image: "/images/call-to-action-bg.png"
-description: Gain invaluable predictive analytics and actionable insights empowering your to make data-driven decisions.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 button:
   enable: true
   label: "Explore All Tools"

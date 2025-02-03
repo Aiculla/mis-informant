@@ -155,7 +155,7 @@ const { pathname } = Astro.url;
                 <li class="nav-item">
                   <a
                     href={menu.url}
-                    class={`nav-link block ${
+                    class={`nav-link block text-lg md:text-xl ${
                       (pathname === `${menu.url}/` || pathname === menu.url) &&
                       "active"
                     }`}>

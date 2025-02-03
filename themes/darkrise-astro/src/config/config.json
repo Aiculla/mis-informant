@@ -4,14 +4,14 @@
     "base_url": "https://darkrise-astro.vercel.app",
     "base_path": "/",
     "trailing_slash": true,
-    "favicon": "/images/favicon.png",
+    "favicon": "/images/test.svg",
     "logo": "/images/test.svg",
-    "logo_width": "164px",
-    "logo_height": "96px",
+    "logo_width": "214px",
+    "logo_height": "106px",
     "logo_footer": "/images/test.svg",
-    "logo_footer_width": "275px",
-    "logo_footer_height": "48px",
-    "logo_text": "Darkrise"
+    "logo_footer_width": "305px",
+    "logo_footer_height": "98px",
+    "logo_text": "MisInformant"
   },
 
   "settings": {
@@ -22,7 +22,7 @@
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Copyright © {year} Darkrise. All Rights Reserved"
+    "copyright": "Copyright © {year} MisInformant. All Rights Reserved"
   },
 
   "subscription": {
