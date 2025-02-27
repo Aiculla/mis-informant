@@ -3,7 +3,6 @@
     { "name": "Home", "url": "#home-banner" },
     { "name": "Features", "url": "#features" },
     { "name": "Testimonials", "url": "#testimonials" },
-    { "name": "Integration", "url": "#integration" },
     { "name": "Contact", "url": "#contact" }
   ],
 
@@ -14,21 +13,17 @@
   "company": [
     { "name": "About", "url": "#home-banner" },
     { "name": "Features", "url": "#features" },
-    { "name": "Testimonials", "url": "#testimonials" },
-    { "name": "Integration", "url": "#integration" }
+    { "name": "Testimonials", "url": "#testimonials" }
   ],
   "product": [
     { "name": "How It Works", "url": "#features" },
-    { "name": "Getting Started", "url": "#integration" },
-    { "name": "User Stories", "url": "#testimonials" },
-    { "name": "Learn More", "url": "#integration" }
+    { "name": "User Stories", "url": "#testimonials" }
   ],
   "resources": [
     { "name": "FAQs", "url": "#contact" },
     { "name": "Feature Help", "url": "#features" }
   ],
   "services": [
-    { "name": "Request A Demo", "url": "/" },
     { "name": "Contact", "url": "#contact" },
     { "name": "404", "url": "/404/" }
   ]

@@ -43,7 +43,7 @@ list:
     content: |
       "Our business wouldn't be where it is today without MisInformant. The feature has been instrumental in our growth."
     customer:
-      avatar: "/images/customers/12.svg"
+      avatar: "/images/customers/11.svg"
       name: David Miller
       designation: CEO, SmallBizCo
     list: # mandatory if featured true
