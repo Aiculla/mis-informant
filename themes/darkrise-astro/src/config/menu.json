@@ -6,10 +6,7 @@
     { "name": "Contact", "url": "#contact" }
   ],
 
-  "footer": [
-    { "name": "Privacy Policy", "url": "/privacy-policy/" },
-    { "name": "Terms & Conditions", "url": "/terms-conditions/" }
-  ],
+  "footer": [{ "name": "Privacy Policy", "url": "/privacy-policy/" }],
   "company": [
     { "name": "About", "url": "#home-banner" },
     { "name": "Features", "url": "#features" },

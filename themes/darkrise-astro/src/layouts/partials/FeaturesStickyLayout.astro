@@ -79,23 +79,9 @@ const features: Features[] = (await getEntry("sections", "features")).data;
                         {images?.map((item, index) => {
                           // Add classes based on every row index number to first & second image
                           const getClass = (mindex: number, index: number) => {
-                            switch (mindex) {
-                              case 0:
-                                return index === 0 ? "w-full" : "w-[60%] mt-6";
-                              case 1:
-                                return index === 0
-                                  ? "w-[76%] "
-                                  : "w-[70%] ml-[24%] mt-[-12%]";
-                              case 2:
-                                return index === 0
-                                  ? "w-[70%] mx-auto"
-                                  : "w-[55%] ml-6 mt-[-20%]";
-                              default:
-                                return index === 0
-                                  ? "w-[76%] "
-                                  : "w-[70%] ml-[24%] mt-[-12%]";
-                            }
-                          };
+  return "w-full"; // Set all images to full width
+};
+
 
                           return (
                             <ImageMod
