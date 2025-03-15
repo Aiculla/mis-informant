@@ -28,7 +28,7 @@ const { featuredCustomer, alternateLayout } = Astro.props as Props;
 let featuredTestimonial;
 
 let list = (await getEntry("sections", "testimonial")).data
-  .list as TestimonialListItem[];
+  .list.filter((testimonial: TestimonialListItem) => testimonial.featured) as TestimonialListItem[];
 
 // If featured customer name is passed then count that customer as featured
 if (featuredCustomer) {
@@ -40,107 +40,170 @@ if (featuredCustomer) {
 }
 ---
 
-{/* Featured Testimonial */}
-{
-  featuredTestimonial && (
-    <div class="col-12 pt-20" data-aos="fade-up-sm" data-aos-delay="200">
-      <div
-        class={`relative rounded-lg border border-border bg-theme-dark/50 p-5 max-lg:mb-10 max-lg:last:mb-0 md:p-10`}>
-        <div class="row gy-4 items-center">
-          <div class="lg:col-5">
-            <div class="relative overflow-hidden rounded-lg bg-theme-dark lg:me-8 transition-transform duration-300 hover:scale-105">
-              <ImageMod
-                src={featuredTestimonial.customer.avatar || ""}
-                alt={featuredTestimonial.customer.name || "customer name"}
-              />
-              {alternateLayout && (
-                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/50 to-transparent p-8">
-                  {featuredTestimonial.customer.name && (
-                    <h4
-                      class="tracking-none mb-2 mt-6 text-lg font-bold"
-                      set:html={markdownify(featuredTestimonial.customer.name)}
-                    />
-                  )}
-                  {featuredTestimonial.customer.designation && (
-                    <p
-                      class="text-sm opacity-70"
-                      set:html={markdownify(
-                        featuredTestimonial.customer.designation,
+{/* Testimonial Slider */}
+<section class="testimonial-slider section pt-0">
+  <div class="swiper testimonial-swiper relative">
+    <div class="swiper-wrapper">
+      {list.map((testimonial) => (
+        <div class="swiper-slide relative">
+          <div class="relative rounded-lg border border-border bg-theme-dark/50 p-5 max-lg:mb-10 max-lg:last:mb-0 md:p-10">
+            <div class="row gy-4 items-center">
+              <div class="lg:col-5">
+                <div class="relative overflow-hidden rounded-lg bg-theme-dark lg:me-8 transition-transform duration-300 hover:scale-105">
+                  <ImageMod
+                    src={testimonial.customer.avatar || ""}
+                    alt={testimonial.customer.name || "customer name"}
+                  />
+                  {alternateLayout && (
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/50 to-transparent p-8">
+                      {testimonial.customer.name && (
+                        <h4
+                          class="tracking-none mb-2 mt-6 text-lg font-bold"
+                          set:html={markdownify(testimonial.customer.name)}
+                        />
                       )}
-                    />
+                      {testimonial.customer.designation && (
+                        <p
+                          class="text-sm opacity-70"
+                          set:html={markdownify(testimonial.customer.designation)}
+                        />
+                      )}
+                    </div>
                   )}
                 </div>
-              )}
-            </div>
-          </div>
-          <div class="lg:col-7" data-aos="fade-up-sm">
-            <div
-              class={`min-h-full rounded-s-3xl ${!alternateLayout && "py-8 lg:pb-0 lg:pt-8"}`}>
-              {!alternateLayout && featuredTestimonial.title && (
-                <h3
-                  class="tracking-none h5 mb-6 font-bold"
-                  set:html={markdownify(featuredTestimonial.title)}
-                />
-              )}
-              {featuredTestimonial.content && (
-                <p
-                  class={`${
-                    alternateLayout
-                      ? "h4 tracking-none opacity-80"
-                      : "opacity-70 text-lg/[170%]"
-                  }`}
-                  set:html={markdownify(featuredTestimonial.content)}
-                />
-              )}
-
-              {!alternateLayout && (
-                <>
-                  {featuredTestimonial.customer.name && (
-                    <h4
-                      class="tracking-none mb-2 mt-6 text-lg font-bold"
-                      set:html={markdownify(featuredTestimonial.customer.name)}
+              </div>
+              <div class="lg:col-7">
+                <div
+                  class={`min-h-full rounded-s-3xl ${!alternateLayout && "py-8 lg:pb-0 lg:pt-8"}`}>
+                  {!alternateLayout && testimonial.title && (
+                    <h3
+                      class="tracking-none h5 mb-6 font-bold"
+                      set:html={markdownify(testimonial.title)}
                     />
                   )}
-                  {featuredTestimonial.customer.designation && (
+                  {testimonial.content && (
                     <p
-                      class="text-sm opacity-70"
-                      set:html={markdownify(
-                        featuredTestimonial.customer.designation,
-                      )}
+                      class={`${
+                        alternateLayout
+                          ? "h4 tracking-none opacity-80"
+                          : "opacity-70 text-lg/[170%]"
+                      }`}
+                      set:html={markdownify(testimonial.content)}
                     />
                   )}
-                </>
-              )}
+
+                  {!alternateLayout && (
+                    <>
+                      {testimonial.customer.name && (
+                        <h4
+                          class="tracking-none mb-2 mt-6 text-lg font-bold"
+                          set:html={markdownify(testimonial.customer.name)}
+                        />
+                      )}
+                      {testimonial.customer.designation && (
+                        <p
+                          class="text-sm opacity-70"
+                          set:html={markdownify(
+                            testimonial.customer.designation,
+                          )}
+                        />
+                      )}
+                    </>
+                  )}
+                </div>
+
+                {testimonial.list && (
+                  <ul class="mt-5 flex flex-col gap-x-10 gap-y-4 border-t border-border pt-5 md:flex-row md:pt-10 lg:mt-10">
+                    {testimonial.list.map((item) => (
+                      <li>
+                        <strong
+                          class="h2 has-gradient"
+                          set:html={markdownify(item.title)}
+                        />
+
+                        {item.description && (
+                          <p
+                            class="opacity-70"
+                            set:html={markdownify(item.description)}
+                          />
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
-
-            {featuredTestimonial.list && (
-              <ul class="mt-5 flex flex-col gap-x-10 gap-y-4 border-t border-border pt-5 md:flex-row md:pt-10 lg:mt-10">
-                {featuredTestimonial.list.map((item) => (
-                  <li>
-                    <strong
-                      class="h2 has-gradient"
-                      set:html={markdownify(item.title)}
-                    />
-
-                    {item.description && (
-                      <p
-                        class="opacity-70"
-                        set:html={markdownify(item.description)}
-                      />
-                    )}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {!alternateLayout && (
-              <div
-                aria-hidden="true"
-                class="rotate-animation pointer-events-none absolute left-1/2 top-0 -z-10 h-80 w-[550px] -translate-x-1/2 rounded-full from-secondary via-secondary/80 via-60% to-dark/0 opacity-30 blur-[120px] bg-gradient-[260deg]"
-              />
-            )}
           </div>
         </div>
-      </div>
+      ))}
     </div>
-  )
-}
+
+    {/* Navigation buttons */}
+    <div class="swiper-button-next" />
+    <div class="swiper-button-prev" />
+  </div>
+</section>
+
+<script>
+  import { Swiper } from "swiper";
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+  import { Autoplay, Navigation, Pagination } from "swiper/modules";
+
+  // astro:page-load event is fired when the page is loaded
+  document.addEventListener("astro:page-load", () => {
+    new Swiper(".testimonial-swiper", {
+      modules: [Autoplay, Pagination, Navigation],
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 8000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+</script>
+
+<style>
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply max-lg:hidden;
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+  }
+
+  .swiper-button-next {
+    transform: translateX(150px);
+    right: 60px;
+  }
+
+  .swiper-button-prev {
+    transform: translateX(-150px);
+    left: 60px;
+  }
+
+  .testimonial-swiper:hover .swiper-button-next,
+  .testimonial-swiper:hover .swiper-button-prev {
+    transform: translateX(0);
+  }
+
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    @apply bg-primary/50 rounded-full p-8 content-[""] bg-no-repeat bg-center;
+    background-image: url("data:image/svg+xml,%3Csvg stroke='%23ffffff' fill='%23ffffff' stroke-width='0' viewBox='0 0 16 16' height='1em' width='1em' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M10.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 8l-2.647-2.646a.5.5 0 010-.708z' clip-rule='evenodd'%3E%3C/path%3E%3Cpath fill-rule='evenodd' d='M2 8a.5.5 0 01.5-.5H13a.5.5 0 010 1H2.5A.5.5 0 012 8z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 1em;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-prev:after {
+    @apply bg-primary/50 rounded-full p-8 content-[""] bg-no-repeat bg-center;
+    background-image: url("data:image/svg+xml,%3Csvg stroke='%23ffffff' fill='%23ffffff' stroke-width='0' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M5.854 4.646a.5.5 0 010 .708L3.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z' clip-rule='evenodd'%3E%3C/path%3E%3Cpath fill-rule='evenodd' d='M2.5 8a.5.5 0 01.5-.5h10.5a.5.5 0 010 1H3a.5.5 0 01-.5-.5z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 1em;
+  }
+</style>

@@ -37,6 +37,11 @@
     "label": "Get This Template",
     "link": "/contact/"
   },
+  "nav_button": {
+    "enable": true,
+    "label": "Get In Touch",
+    "link": "/contact"
+  },
 
   "disqus": {
     "enable": true,
