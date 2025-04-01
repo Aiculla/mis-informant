@@ -24,7 +24,6 @@ export interface NavigationLink {
 const { main }: { [key: string]: NavigationLink[] } = menu;
 const { pathname } = Astro.url;
 ---
-
 <header class={`header sticky top-0 z-30 ${!(pathname === "/") && "mb-10"}`}>
   <nav class="navbar container relative z-10 flex items-center justify-between">
     <!-- logo -->
@@ -33,7 +32,7 @@ const { pathname } = Astro.url;
     </div>
 
     <!-- navbar toggler -->
-    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <input id="nav-toggle" type="checkbox" class="hidden peer" />
     <label
       for="nav-toggle"
       class="order-2 flex cursor-pointer items-center text-text lg:hidden">
@@ -51,9 +50,10 @@ const { pathname } = Astro.url;
     </label>
     <!-- /navbar toggler -->
 
+    <!-- Mobile & Desktop Navigation -->
     <ul
       id="nav-menu"
-      class="navbar-nav order-1 hidden lg:flex lg:w-auto lg:space-x-4 xl:space-x-6">
+      class="navbar-nav order-1 hidden peer-checked:flex flex-col absolute top-full left-0 w-full bg-gray-900 text-white shadow-xl rounded-lg lg:flex lg:flex-row lg:relative lg:w-auto lg:bg-transparent lg:shadow-none lg:text-gray-900 lg:space-x-4 xl:space-x-6 transition-all duration-300 ease-in-out">
       {
         main.map((menu) => (
           menu.name && (
@@ -70,10 +70,19 @@ const { pathname } = Astro.url;
           )
         ))
       }
+      <!-- Move Request Demo Button Inside Mobile Menu -->
+      <li class="nav-item lg:hidden mt-4">
+        <a
+          href="https://calendly.com/ahonablue-georgestreetinc/misinformant-demo"
+          class="bg-blue-500 text-white text-lg px-5 py-2 rounded-full hover:bg-blue-600 transition block text-center"
+        >
+          Request Demo
+        </a>
+      </li>
     </ul>
 
-    <!-- Request Demo Button -->
-    <div class="order-3">
+    <!-- Request Demo Button (Hidden on Mobile) -->
+    <div class="order-3 hidden lg:block">
       <a
         href="https://calendly.com/ahonablue-georgestreetinc/misinformant-demo"
         class="bg-blue-500 text-white-xl px-5 py-2 rounded-full hover:bg-blue-600 transition"
@@ -83,6 +92,7 @@ const { pathname } = Astro.url;
     </div>
   </nav>
 </header>
+
 
 
 {/* Background Pattern Image Show Only Home & Changelog Page */}
