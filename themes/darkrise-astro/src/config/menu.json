@@ -1,27 +1,20 @@
 {
   "main": [
-    { "name": "Home", "url": "#home-banner" },
-    { "name": "Features", "url": "#features" },
-    { "name": "Testimonials", "url": "#testimonials" },
-    { "name": "Contact", "url": "#contact" }
+    { "name": "Home", "url": "/" },
+    { "name": "Features", "url": "/#features" },
+    { "name": "Testimonials", "url": "/#testimonials" },
+    { "name": "Contact", "url": "/#contact" }
   ],
-
   "footer": [{ "name": "Privacy Policy", "url": "/privacy-policy/" }],
   "company": [
     { "name": "About", "url": "#home-banner" },
-    { "name": "Features", "url": "#features" },
-    { "name": "Testimonials", "url": "#testimonials" }
+    { "name": "Our Team", "url": "#testimonials" }
   ],
   "product": [
-    { "name": "How It Works", "url": "#features" },
-    { "name": "User Stories", "url": "#testimonials" }
-  ],
-  "resources": [
-    { "name": "FAQs", "url": "#contact" },
-    { "name": "Feature Help", "url": "#features" }
-  ],
-  "services": [
-    { "name": "Contact", "url": "#contact" },
-    { "name": "404", "url": "/404/" }
+    { "name": "Features", "url": "features" },
+    {
+      "name": "Testimonials",
+      "url": "/#testimonials"
+    }
   ]
 }

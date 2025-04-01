@@ -1,16 +1,16 @@
 {
   "site": {
-    "title": "Darkrise",
-    "base_url": "https://darkrise-astro.vercel.app",
+    "title": "Misinformant",
+    "base_url": "https://misinformant.georgestreetinc.com/",
     "base_path": "/",
     "trailing_slash": true,
     "favicon": "/images/test.svg",
-    "logo": "/images/test.svg",
-    "logo_width": "214px",
-    "logo_height": "106px",
-    "logo_footer": "/images/test.svg",
-    "logo_footer_width": "305px",
-    "logo_footer_height": "98px",
+    "logo": "/images/Misinformant.svg",
+    "logo_width": "220px",
+    "logo_height": "100px",
+    "logo_footer": "/images/Misinformant.svg",
+    "logo_footer_width": "350px",
+    "logo_footer_height": "120px",
     "logo_text": "MisInformant"
   },
 

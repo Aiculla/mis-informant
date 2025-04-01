@@ -11,7 +11,7 @@
     - Both often spiking around major events.
 - title: The Digital Trust Revolution
   images:
-    - "/images/features/1.png"
+    - "/images/features/digital-trust.png"
   description: Misinformation impacts us all, but certain age groups are especially vulnerable, facing it more frequently and with greater consequences.
   list:
     - Digital literacy is crucial to avoiding false information.
