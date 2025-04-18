@@ -69,18 +69,18 @@ const features: Features[] = (await getEntry("sections", "features")).data;
                     )}
                   </div>
                 </div>
-                <div class="lg:col-6">
+                <div class="lg:col-6 flex items-center justify-center">
                   <div class="rounded-3xl bg-body lg:pl-5">
                     <div class="flex min-h-full items-center px-5 md:justify-center md:px-10">
                       <div
-                        class="relative py-10 md:w-[60%] lg:w-auto lg:py-20"
+                        class="relative py-10 md:w-[60%] lg:w-auto lg:py-20 mb-6"
                         data-aos="fade-up-sm"
                         data-aos-delay="250">
                         {images?.map((item, index) => {
                           // Add classes based on every row index number to first & second image
                           const getClass = (mindex: number, index: number) => {
-  return "w-full"; // Set all images to full width
-};
+                          return "w-full"; // Set all images to full width
+                        };
 
 
                           return (

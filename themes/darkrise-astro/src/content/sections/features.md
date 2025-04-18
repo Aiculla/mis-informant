@@ -1,7 +1,7 @@
 ---
 - title: The Fight Against Misinformation
   images:
-    - "/images/features/2.png"
+    - "/images/features/9.png"
 
   description: False information spreads fast, but not all of it is the same. Misinformation is false info shared by mistake. Disinformation is false info spread deliberately to deceive.
   list:

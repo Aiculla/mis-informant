@@ -21,7 +21,8 @@
   },
 
   "params": {
-    "contact_form_action": "#",
+    "contact_form_action": "https://formspree.io/f/mzzelolo",
+    "waitlist_form_action": "https://formspree.io/f/mkgjlenw",
     "copyright": "Copyright © {year} MisInformant. All Rights Reserved"
   },
 

@@ -1,0 +1,67 @@
+---
+import config from "@/config/config.json";
+import Base from '../layouts/Base.astro';
+import { markdownify } from "@/lib/utils/textConverter";
+
+const { waitlist_form_action }: { waitlist_form_action: string } = config.params;
+---
+<Base>
+<section class="section">
+  <div class="container">
+    <h1 class="h2 has-gradient mb-6">Join Our Early Access Waitlist</h1>
+    <p class="mb-8 text-lg opacity-70">
+      Be the first to try our app when it launches. Sign up below and we’ll keep you in the loop!
+    </p>
+
+    <form
+      id="waitlist-form"
+      class="row g-4 max-w-lg mx-auto"
+      action={waitlist_form_action}
+      method="POST"
+    >
+      <!-- Tell Formspree to redirect back here or to your thank‑you page -->
+      <input
+        type="hidden"
+        name="_next"
+        value="https://misinformant.georgestreetinc.com/thank-you"
+      />
+      <input type="hidden" name="_captcha" value="false" />
+
+      <div class="col-12">
+        <label for="email" class="form-label">
+          Your Email <span class="text-red-500">*</span>
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          class="form-input"
+          placeholder="you@example.com"
+        />
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn rounded-full border-border text-white">
+          <span class="value">Join Waitlist</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Optional JS fallback—forces redirect after Formspree posts -->
+<script type="module">
+  const form = document.getElementById('waitlist-form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    await fetch(form.action, {
+      method: form.method,
+      headers: { Accept: 'application/json' },
+      body: data,
+    });
+    window.location.href = '/thank-you';
+  });
+</script>
+</Base>

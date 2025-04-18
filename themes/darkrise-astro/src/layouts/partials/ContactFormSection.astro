@@ -16,9 +16,8 @@ interface ContactItem {
 }
 
 const { contact_form_action }: { contact_form_action: string } = config.params;
-const { contact_form }: { contact_form: ContactForm } = (
-  await getEntry("contact", "-index")
-).data;
+const { contact_form }: { contact_form: ContactForm } =
+  (await getEntry("contact", "-index"))!.data;
 ---
 
 {
@@ -73,6 +72,8 @@ const { contact_form }: { contact_form: ContactForm } = (
             data-aos-delay="200">
             <div class="rounded-2xl border border-white/5 bg-theme-dark p-5 md:p-16">
               <form class="row g-4" action={contact_form_action} method="post">
+                <input type="hidden" name="_next"   value="https://misinformant.georgestreetinc.com/thank-you" />
+                <input type="hidden" name="_captcha" value="false"      />
                 <div class="lg:col-6">
                   <label for="name" class="form-label">
                     First Name <span class="text-red-500">*</span>
@@ -141,5 +142,20 @@ const { contact_form }: { contact_form: ContactForm } = (
         />
       </div>
     </section>
+    <script type="module">
+  document.querySelector('form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { Accept: 'application/json' }
+    });
+    // now manually redirect
+    window.location.href = '/thank-you';
+  });
+</script>
+
   )
 }
