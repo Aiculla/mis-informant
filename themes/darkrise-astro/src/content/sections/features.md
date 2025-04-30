@@ -1,14 +1,14 @@
 ---
 - title: The Fight Against Misinformation
   images:
-    - "/images/features/2.png"
-
+    - "/images/features/fight.png"
   description: False information spreads fast, but not all of it is the same. Misinformation is false info shared by mistake. Disinformation is false info spread deliberately to deceive.
   list:
     - Fact-checking is crucial to stop the spread of false information.
     - Misinformation spreads unintentionally
     - Disinformation is intentional and manipulative.
     - Both often spiking around major events.
+
 - title: The Digital Trust Revolution
   images:
     - "/images/features/digital-trust.png"
@@ -18,6 +18,7 @@
     - The likelihood of encountering misinformation increases with age.
     - Nearly 60% of adults 45-64 frequently see misinformation online.
     - Misinformation spreads quickly, affecting public opinion, behavior, and decisions.
+
 - title: Our Promise
   images:
     - "/images/features/funnel.png"
@@ -26,4 +27,13 @@
     - We ensure the content provided is both fair and unbiased.
     - We want you to have the tools and knowledge needed to discern fact from fiction.
     - We are always learning and adapting, so we can better serve you with the most accurate, reliable information.
+
+- title: New Feature Example
+  images:
+    - "/images/features/new-feature.png"
+  description: This is a new feature description to test if the new item appears correctly.
+  list:
+    - This is a new point for the new feature.
+    - This is another point for the new feature.
+    - This is yet another point to test the new feature.
 ---
