@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base>
+  <section class="section text-center py-20">
+    <div class="container">
+      <h1 class="h2 has-gradient mb-4">Join the Waitlist</h1>
+      <p class="text-lg opacity-70">
+        Be the first to know when we launch! Please fill out the form to join the waitlist.
+      </p>
+
+      <form action="https://formsubmit.co/Aalayah4265@gmail.com" method="POST" class="mt-8">
+        <!-- Name Field -->
+        <div class="mb-4">
+          <label for="name" class="form-label">Full Name <span class="text-red-500">*</span></label>
+          <input id="name" name="name" class="form-input" type="text" required />
+        </div>
+
+        <!-- Email Field -->
+        <div class="mb-4">
+          <label for="email" class="form-label">Email Address <span class="text-red-500">*</span></label>
+          <input id="email" name="email" class="form-input" type="email" required />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mb-4">
+          <button type="submit" class="btn btn-primary rounded-full">
+            Join Waitlist
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</Base>
