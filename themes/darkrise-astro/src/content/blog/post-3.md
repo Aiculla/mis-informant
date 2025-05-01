@@ -3,7 +3,7 @@ title: "New in the App: Submit a Claim with a Screenshot"
 meta_title: ""
 description: "this is meta description"
 date: 2022-04-04T05:00:00Z
-image: "/images/blog/3.jpg"
+image: "/images/blog/10.png"
 categories: ["Software"]
 author: "Jenny Wilson"
 tags: ["software", "tailwind"]

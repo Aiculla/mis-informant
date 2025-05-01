@@ -26,6 +26,7 @@
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
     "disqus-react": "^1.1.5",
+    "firebase": "^11.6.1",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "marked": "14.1.3",
