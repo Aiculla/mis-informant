@@ -8,10 +8,11 @@
   "footer": [{ "name": "Privacy Policy", "url": "/privacy-policy/" }],
   "company": [
     { "name": "About", "url": "#home-banner" },
-    { "name": "Our Team", "url": "#testimonials" }
+    { "name": "Our Team", "url": "#testimonials" },
+    { "name": "Blog", "url": "/blog/" }
   ],
   "product": [
-    { "name": "Features", "url": "features" },
+    { "name": "Features", "url": "/#features" },
     {
       "name": "Testimonials",
       "url": "/#testimonials"

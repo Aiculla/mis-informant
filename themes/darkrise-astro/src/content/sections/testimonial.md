@@ -15,16 +15,16 @@ list:
     list:
       - title: Color Wheel Afficionado
         description:
-  - title: "The Brand Architect" # mandatory if featured true
+  - title: "The Influencer" # mandatory if featured true
     featured: true
     content: |
 
     customer:
       avatar: "/images/customers/tommy.jpg"
       name: Thomas O’Neill
-      designation: Marketing Strategist
+      designation: Communications and Marketing
     list:
-      - title: Storytelling Expert
+      - title: Professional Doomscoller
   - title: The Builder # mandatory if featured true
     featured: true
     content:
@@ -34,15 +34,15 @@ list:
       designation: Lead Developer
     list: # mandatory if featured true
       - title: 30x Engineer
-  # - title: "The Visionary Leader" # mandatory if featured true
-  #   featured: true
-  #   content:
-  #   customer:
-  #     avatar: "/images/customers/wally.jpeg"
-  #     name: Theresa Harrison
-  #     designation: Owner & President
-  #   list:
-  #     - title: Strategic Trailblazer
+  - title: "The Dreamer" # mandatory if featured true
+    featured: true
+    content:
+    customer:
+      avatar: "/images/customers/theresa.jpg"
+      name: Theresa Harrison
+      designation: Owner & President
+    list:
+      - title: Head Honcho in Heels
   - title: "A Must-Have for Any Business" # mandatory if featured true
     featured: false
     content: |

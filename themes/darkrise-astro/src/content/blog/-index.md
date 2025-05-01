@@ -4,6 +4,6 @@ meta_title: ""
 description: "this is meta description"
 
 hero:
-  title: Our Blog
-  description: Gain invaluable predictive analytics and actionable insights, empowering your team to make data-driven decisions and close.
+  title: "Truth Dispatch: The MisInformant Blog"
+  description: From behind-the-scenes updates to myth-busting guides and expert insights, we’re here to help you navigate the noise and illuminate the truth.
 ---

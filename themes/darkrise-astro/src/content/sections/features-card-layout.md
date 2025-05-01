@@ -1,6 +1,6 @@
 ---
 title: and, more features
-description: Gain invaluable predictive analytics and actionable insights, empowering your team to make data-driven decisions and close.
+description: Discover how MisInformant helps you detect misinformation, verify claims, and make informed decisions—with tools designed for clarity, speed, and truth.
 list:
   - icon: "/images/icons/svg/setup.svg" # get outline svg icons from here - https://www.svgrepo.com/vectors/security/outlined/
     title: Real-Time Detection
