@@ -4,7 +4,6 @@ meta_title: ""
 description: "this is meta description"
 date: 2025-04-04T05:00:00Z
 image: "/images/blog/blog.jpg"
-featured: true
 draft: false
 ---
 
