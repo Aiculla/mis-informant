@@ -5,5 +5,5 @@ description: "this is meta description"
 
 hero:
   title: "Truth Dispatch: The MisInformant Blog"
-  description: From behind-the-scenes updates to myth-busting guides and expert insights, we’re here to help you navigate the noise and illuminate the truth.
+  description: Explore insights, uncover facts, and stay sharp. We'll deliver thought-provoking takes on misinformation, media literacy, and digital awareness—because knowing better helps us all do better.
 ---

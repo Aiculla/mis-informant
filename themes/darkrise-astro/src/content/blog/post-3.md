@@ -1,8 +1,8 @@
 ---
-title: "New in the App: Submit a Claim with a Screenshot"
+title: "Early Adopter Benefits: Why You Should Join Our Waitlist Today"
 meta_title: ""
 description: "this is meta description"
-date: 2022-04-04T05:00:00Z
+date: 2025-06-03T05:00:00Z
 image: "/images/blog/10.png"
 categories: ["Software"]
 author: "Jenny Wilson"
@@ -10,22 +10,28 @@ tags: ["software", "tailwind"]
 draft: false
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The fight against misinformation is heating up. Every day, new stories are distorted, facts are twisted, and trust in what we read online becomes harder to hold onto. At Misinformant, we’re building a platform designed to cut through the noise, uncover the truth, and empower you with the clarity you deserve. For the first time, you have the chance to be among the very first to experience it.
 
-#### 1. Pempus leo eu aenean
+When you join our waitlist, you’re not just waiting. You’re unlocking these exclusive advantages:
 
-**Ad litora torquent:** Pempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+#### First Access to a Game-Changing Tool
 
-**Nostrud exercitation:** Implement comprehensive email filtering solutions, educate employees about recognizing phishing attempts, and use two-factor authentication (2FA) to protect accounts.
+Our early adopters will be the first to use Misinformant’s powerful suite of features. From intelligent source analysis to real-time alerting when misinformation spikes, you’ll be at the cutting edge of information integrity.
 
-#### 2. Pempus leo eu aenean
+#### Direct Influence on the Product
 
-**Ad litora torquent:** Pempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+We’re listening. As an early user, your feedback shapes the platform. You’ll help us improve functionality, enhance user experience, and
 
-**Nostrud exercitation:** Implement comprehensive email filtering solutions, educate employees about recognizing phishing attempts, and use two-factor authentication (2FA) to protect accounts.
+expand our reach. Your voice will be a key part of Misinformant’s evolution.
 
-#### 3. Pempus leo eu aenean
+#### Insider Perks and Beta Tools
 
-**Ad litora torquent:** Pempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+From private demos to feature previews and content insights before public release, our waitlist members get behind-the-scenes access that others won’t.
 
-**Nostrud exercitation:** Implement comprehensive email filtering solutions, educate employees about recognizing phishing attempts, and use two-factor authentication (2FA) to protect accounts.
+#### Community of Change-Makers
+
+You’ll be connected with a group of journalists, researchers, tech leaders, and everyday truth-seekers who all believe in fighting misinformation. Together, we’re building a smarter, more informed public.
+
+Joining early isn’t just about being ahead of the curve. It’s about standing up for truth before it becomes trendy and helping others do the same. This is your chance to get in on the ground floor of something that matters.
+
+Join our waitlist today at https://misinformant.georgestreetinc.com/waitlist/ and become part of the solution.

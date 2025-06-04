@@ -2,8 +2,8 @@
 title: "Top 5 Reasons Why Fact-Checking Alone Isn’t Enough Anymore"
 meta_title: ""
 description: "this is meta description"
-date: 2022-04-04T05:00:00Z
-image: "/images/blog/9.png"
+date: 2025-02-02T05:00:00Z
+image: "/images/blog/3.png"
 categories: ["Technology", "Data"]
 author: "Sam Wilson"
 tags: ["technology", "tailwind"]
