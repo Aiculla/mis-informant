@@ -2,12 +2,13 @@
 title: "The Psychology of Misinformation: Why We Believe Lies"
 meta_title: ""
 description: "this is meta description"
-date: 2025-05-09T05:00:00Z
+date: 2025-05-23T00:00:00Z
 image: "/images/blog/1.png"
 categories: ["Architecture"]
 author: "Jenny Wilson"
 tags: ["silicon", "technology"]
 draft: false
+featured: true
 ---
 
 We like to think we’re good at spotting lies. But the truth is, even the most informed people fall for misinformation.
