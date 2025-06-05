@@ -8,7 +8,6 @@ categories: ["Architecture"]
 author: "Jenny Wilson"
 tags: ["silicon", "technology"]
 draft: false
-featured: true
 ---
 
 We like to think we’re good at spotting lies. But the truth is, even the most informed people fall for misinformation.
