@@ -1,11 +1,11 @@
 ---
 enable: true
-title: Combat Misinformation,
+title: Misinformant Mobile App
 image: "/images/call-to-action.png"
-bg_image: "/images/call-to-action-bg.png"
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+bg_image: "/images/call-to-action-6.png"
+description: Our Mobile App is coming soon!
 button:
   enable: true
-  label: "Explore All Tools"
-  link: "/contact/"
+  label: "Join Waitlist"
+  link: "/waitlist/"
 ---
