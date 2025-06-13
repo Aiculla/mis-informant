@@ -8,7 +8,6 @@ categories: ["Technology", "Data"]
 author: "Sam Wilson"
 tags: ["technology", "tailwind"]
 draft: false
-featured: true
 ---
 
 Fake news spreads faster than truth. It’s not just a problem of social media or poor journalism, it’s a crisis of trust, speed, and scale. The internet moves quickly, and misinformation moves even faster. In a landscape flooded with conflicting headlines and manipulated narratives, it has become harder to know what’s real. That’s where artificial intelligence is stepping in and is changing the rules of the game.

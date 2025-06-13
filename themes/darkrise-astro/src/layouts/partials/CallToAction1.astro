@@ -9,40 +9,45 @@ interface CallToAction {
   enable: boolean;
   title: string;
   bg_image: string;
+  mobile_bg_image?: string; // Optional mobile background
   description: string;
   button: Button;
   image: string;
 }
 
-const { enable, title, bg_image, description, image, button }: CallToAction = (
+const { enable, title, bg_image, mobile_bg_image, description, image, button }: CallToAction = (
   await getEntry("sections", "call-to-action-1")
 ).data;
 ---
 
-{
-  enable && (
-    <section class="section">
-      <div class="container">
-        <div class="relative overflow-hidden rounded-2xl border border-border bg-theme-dark/60 p-7 !pb-0 md:p-10 lg:pl-6 lg:pr-0 lg:pt-16 ">
-          <div class="row relative z-10 lg:gy-0">
-            <div class="lg:col-5">
-              <div class="min-h-full pb-16">
-                <div>
-                  <h2
-                    set:html={markdownify(title)}
-                    class="has-gradient hidden md:block mb-6"
-                    data-aos="fade-up-sm"
-                  />
-                  <div data-aos="fade-up-sm" data-aos-delay="50">
-                    <p
-                      set:html={markdownify(description)}
-                      class="text-lg/[inherit] hidden md:block opacity-50"
-                    />
-                  </div>
-                </div>
+{enable && (
+  <section class="section">
+    <div class="container">
+      <div class="relative overflow-hidden rounded-2xl border border-border bg-theme-dark/60  pb-16 sm:py-64 md:py-64 lg:px-12 lg:py-44">
+        <div class="relative z-10">
+          <!-- Mobile/Tablet layout: stacked at top -->
+          <div class="flex flex-col lg:hidden text-center w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto gap-y-6">
+
+          </div>
+
+          <!-- Desktop layout -->
+          <div class="row items-center gap-y-10 hidden lg:flex">
+            <div class="lg:col-6">
+              <div class="max-w-2xl mx-auto text-left">
+                <h2
+                  set:html={markdownify(title)}
+                  class="has-gradient mb-6 text-3xl font-bold"
+                  data-aos="fade-up-sm"
+                />
+                <p
+                  set:html={markdownify(description)}
+                  class="text-lg opacity-70"
+                  data-aos="fade-up-sm"
+                  data-aos-delay="50"
+                />
                 {button.enable && (
                   <AnimatedAnchor
-                    className="btn-primary mt-3 lg:mt-6 xl:mt-36"
+                    className="btn-primary mt-8"
                     link={button.link}
                     label={button.label}
                     data-aos="fade-up-sm"
@@ -51,17 +56,33 @@ const { enable, title, bg_image, description, image, button }: CallToAction = (
                 )}
               </div>
             </div>
-
-          </div>
-          <div aria-hidden="true">
-            <ImageMod
-              class="absolute inset-0 z-0 h-full w-full object-contain object-cover object-center"
-              src={bg_image}
-              alt="background pattern image"
-            />
+            <div class="lg:col-6"></div>
           </div>
         </div>
+
+        <!-- Background image for desktop -->
+        {bg_image && (
+          <div aria-hidden="true" class="hidden lg:block absolute inset-0 z-0">
+            <ImageMod
+              class="h-full w-full object-cover object-center opacity-80"
+              src={bg_image}
+              alt="background image for desktop"
+            />
+          </div>
+        )}
+
+        <!-- Background image for mobile/tablet -->
+        {(mobile_bg_image || bg_image) && (
+          <div aria-hidden="true" class="block lg:hidden absolute inset-0 z-0">
+            <ImageMod
+              class="h-full w-full object-cover object-center opacity-80"
+              src={mobile_bg_image || bg_image}
+              alt="background image for mobile"
+            />
+          </div>
+        )}
       </div>
-    </section>
-  )
-}
+    </div>
+  </section>
+)}
+
