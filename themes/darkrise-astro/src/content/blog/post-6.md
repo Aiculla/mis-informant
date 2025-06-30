@@ -8,7 +8,7 @@ categories: ["Architecture"]
 author: "Jenny Wilson"
 tags: ["silicon", "technology"]
 draft: false
-featured: true
+
 ---
 
 Just after midnight on May 9, a journalist in India received a message via WhatsApp from Prasar Bharati, the government-run broadcaster. The message claimed that Pakistan's army chief had been detained and that a military coup was underway.
