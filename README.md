@@ -5,9 +5,18 @@ MisInformant is a responsive web application designed to help users verify claim
 
 ---
 
+## 🛠️ Run Locally
 
-## 🚀 Getting Started
+1. Install dependencies:
 
-1. **Clone the repository**  
-2. **npm install**
-3. **npm run dev**
+   ```bash
+   npm install
+   ```
+
+2. Start the site:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Make sure your backend is running at [http://localhost:3000](http://localhost:3000).
