@@ -8,7 +8,7 @@ categories: ["Architecture"]
 author: "Jenny Wilson"
 tags: ["silicon", "technology"]
 draft: false
-featured: true
+featured: false
 ---
 
 TikTok has become a go-to source for health advice, especially among younger users. But beneath the surface of viral trends and quick fixes lies a troubling reality: a large share of so-called helpful tips are misleading or even dangerous.
