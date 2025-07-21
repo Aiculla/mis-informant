@@ -50,12 +50,12 @@ Posts that present a single perspective without acknowledging complexity or oppo
 
  
 
-8.**Echo chambers and personal biases**
+8. **Echo chambers and personal biases**
 Social media algorithms are designed to show you content that aligns with your existing beliefs. This creates echo chambers that reinforce misinformation. If something feels like it confirms your views a little too perfectly, consider checking a source outside your usual bubble. Bias is natural, but awareness of that bias can prevent us from blindly accepting false claims that validate what we already think.
 
  
 
-9.**Unknown or suspicious sources**
+9. **Unknown or suspicious sources**
 Always look at where the information is coming from. Fake news outlets often mimic the appearance of reputable media sites but have small details that reveal their illegitimacy, such as strange domain names (.lo, .co.news), grammatical errors, or a lack of editorial team information. If you do not recognize the outlet, search for its reputation or check if it appears on trusted lists of disinformation sources.
 
  
