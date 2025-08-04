@@ -8,7 +8,7 @@ categories: ["Architecture"]
 author: "Jenny Wilson"
 tags: ["silicon", "technology"]
 draft: false
-featured: true
+featured: false
 ---
 
 When scrolling through feeds, it is crucial to recognize the signs that a post might be misleading or completely untrue. Here are ten clear warning signs you should watch out for:
