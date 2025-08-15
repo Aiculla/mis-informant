@@ -8,7 +8,7 @@ categories: ["Architecture"]
 author: "Jenny Wilson"
 tags: ["silicon", "technology"]
 draft: false
-featured: true
+featured: false
 ---
 
 In 2025, the phrase “false flag” is no longer confined to the corners of fringe forums or late-night conspiracy radio. It’s gone mainstream. What was once a technical term to describe covert government operations meant to deceive the public has become a catch-all accusation hurled at nearly every major tragedy, from mass shootings to natural disasters.
